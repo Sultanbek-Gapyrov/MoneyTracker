@@ -1,7 +1,3 @@
-import 'package:flutter/material.dart';
-
-import 'package:flutter/foundation.dart';
-
 class Transaction {
   String id;
   String title;
