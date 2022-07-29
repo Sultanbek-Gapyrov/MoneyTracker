@@ -4,8 +4,10 @@ import 'package:planner_app/models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
-  const TransactionList(
+  final Function deleteTx;
+  TransactionList(
     this.transactions,
+    this.deleteTx,
   );
 
   @override
@@ -57,6 +59,15 @@ class TransactionList extends StatelessWidget {
                     ),
                     subtitle: Text(
                       DateFormat.yMMMd().format(transactions[index].date),
+                    ),
+                    trailing: IconButton(
+                      icon: const Icon(
+                        Icons.delete,
+                      ),
+                      color: Colors.black,
+                      onPressed: () {
+                        deleteTx(transactions[index].id);
+                      },
                     ),
                   ),
                 );
