@@ -5,7 +5,7 @@ import 'package:planner_app/models/transaction.dart';
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
   final Function deleteTx;
-  TransactionList(
+  const TransactionList(
     this.transactions,
     this.deleteTx,
   );
@@ -24,7 +24,7 @@ class TransactionList extends StatelessWidget {
                 const SizedBox(
                   height: 20.0,
                 ),
-                Container(
+                SizedBox(
                   height: 200.0,
                   child: Image.asset(
                     'assets/images/waiting.png',
