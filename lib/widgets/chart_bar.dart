@@ -1,4 +1,3 @@
-import 'package:flutter/widgets.dart';
 import 'package:flutter/material.dart';
 
 class ChartBar extends StatelessWidget {
@@ -15,7 +14,7 @@ class ChartBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Container(
+        SizedBox(
           height: 20.0,
           child:
               FittedBox(child: Text('\$${spendingAmount.toStringAsFixed(0)}')),
@@ -23,7 +22,7 @@ class ChartBar extends StatelessWidget {
         const SizedBox(
           height: 4.0,
         ),
-        Container(
+        SizedBox(
           height: 60.0,
           width: 10.0,
           child: Stack(
@@ -34,7 +33,7 @@ class ChartBar extends StatelessWidget {
                     color: Colors.grey,
                     width: 1.0,
                   ),
-                  color: Color.fromRGBO(220, 220, 220, 1),
+                  color: const Color.fromRGBO(220, 220, 220, 1),
                   borderRadius: BorderRadius.circular(10),
                 ),
               ),
